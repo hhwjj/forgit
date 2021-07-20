@@ -1,16 +1,19 @@
-f=[]
-for i in range(100):
-    k=str(i)+"666"
-    l="666"+str(i)
+s1=list(range(0,10000))
+s2=set()
+for k in s1:s2.add(str(k).zfill(4))
 
-    if k!=l:
-        f.append(int(l))
-        f.append(int(k))
-    else:
-        f.append(int(k))
-f.sort()
+temp=set()
 
 
+for i in s2:
+    j=0
+    while j<=len(i):
+        str1=i[:j]+"666"+i[j:]
+        temp.add(int(str1))
+        j+=1
+temp=list(temp)
+temp.sort()
 
-n=int(input())
-print(f[n-1])
+while 1:
+    n=int(input())
+    print(temp[n-1])

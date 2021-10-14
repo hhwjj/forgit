@@ -1,9 +1,12 @@
 import math
 num=int(input())
-s_num=list()
+s_num=[]
+
 for i in range(num):
     j=int(input())
     s_num.append(j)
+print(s_num)
+
 s_num.sort()
 len_num=len(s_num)
 avg=sum(s_num)/len_num
